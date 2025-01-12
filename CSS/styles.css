@@ -228,7 +228,7 @@ nav > ul{
     text-align:justify;
 }
 .name{
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: left;
 }
 .separator{
@@ -393,17 +393,17 @@ footer{
         box-shadow: 20px 20px var(--font-main-color);
     }
     .name{
-        font-size: 1.2rem;
-    }
-    #about-description{
-        font-size: 1rem;
+        font-size: 1.9rem;
     }
     .project-tile{
         margin-top: 30px;
     }
-  .about-description{
-    padding:0;
-  }
+    .about-description{
+        padding:0;
+    }
+    .sub-section{
+        padding: 50px 20px 0 20px;
+    }
 }
 @media (max-width:950px){
     .about-content-container{
@@ -412,7 +412,15 @@ footer{
     .description-content h1{
         font-size: 4rem;
     }
-
+    .section-title{
+        font-size: 2.3rem;
+    }
+    .about-content-container > div {
+        padding-top: 0px;
+    }
+    .about-img{
+        margin-bottom:20px;
+    }
 }
 @media (max-width:1080px) {
     #project-cards{
@@ -435,13 +443,24 @@ footer{
     }
 }
 @media (max-width:1200px){
+
+    #footer h1{
+        font-size: 4rem;
+        line-height: 80px;
+    }.contacts
+    #berndt-2{
+        max-width: 450px;
+        max-height: 450px;
+    }
     .section{
         height: fit-content;
     }
     .titles{
         height: 100px;
     }
-
+    #about-description{
+        font-size: 1rem;
+    }
     .about-content-secondary-container,
     .about-description,
     .about-img{
