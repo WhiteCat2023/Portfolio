@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --font-main-color:#31363F;
+    --scrollbar-bg-color: #eaeaea;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: var(--font-main-color);
+    scroll-behavior: smooth;
+
+}
+html, body{
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    height: auto;
+    position: relative;
+    overscroll-behavior: none;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--scrollbar-bg-color);
+    border-radius: 100vw;
+    margin-block: 50px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--font-main-color);
+    border-radius: 100vw;
+    border: 2px solid var(--scrollbar-bg-color);
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 999;
+}
+nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+nav > h1{
+    font-size: 40px;
+    
+}
+nav > ul{
+    list-style-type: none;
+    display: flex;
+}
+#menu > li{
+    display: flex;
+    align-items: center;
+}
+.nav-links{
+    padding: 10px 20px;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+}
+.nav-links::after{
+    content: "";
+    background-color: #31363F;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .3s;
+}
+.nav-links:hover::after{
+    width: 100%;
+}
+.nav-contacts{
+    padding: 10px 10px;
+    transition: .3s;
+    cursor: pointer;
+}
+.nav-contacts:hover{
+    transform: scale(1.2);
+}
+#menu hr{
+    margin: 0 20px;
+}
+
+
+.hamburger{
+    display:none;
+    cursor:pointer
+}
+.line{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--font-main-color);
+    margin: 5px auto;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.intro-sub-section,
+.sub-section,
+.content{
+    height: 100%;
+}
+.sub-section,
+.intro-sub-section{
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 50px 50px 0 50px;
+}
+.titles{
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+.section-title{
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+}
+.project-tile{
+    height: 80%;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+
+
+
+#welcome-section{
+    width: 100%;
+    height: 100dvh;
+}
+.introduction-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.introduction-content > div{
+    width: 50%;
+    height: 100%;
+}
+.berndt-photo-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#berndt{
+    width: 70%;
+    max-width: 500px;
+    border-radius: 100px 5px 100px 5px;
+    box-shadow: 50px 50px var(--font-main-color);
+}
+#description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.description-content h1{
+    font-size: 5rem;
+}
+.description-content p{
+    font-size: 3rem;
+}
+
+
+
+.about-content-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.about-content-container > div{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    height: 100%;
+}
+#berndt-2{
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    max-width: 500px;
+    border-radius: 35px;
+    background: #e0e0e0;
+    object-fit:none;
+    box-shadow:  8px 8px 16px #aaaaaa,
+             -8px -8px 16px #ffffff;
+    
+}
+.about-description{
+    width: 50%;
+  padding:30px;
+}
+.about-content-secondary-container{
+    width: fit-content;
+}
+.about-img{
+    width: 50%;
+}
+.name,
+#about-description{
+    width: 80%;
+    margin-left: 100px;
+    letter-spacing: .05em;
+}
+
+#about-description{
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align:justify;
+}
+.name{
+    font-size: 3rem;
+    text-align: left;
+}
+.separator{
+    margin: 20px 0;
+    width: 80%;
+    margin-left: 100px;
+    height: 2px;
+}
+
+
+
+
+#project-cards{
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-auto-rows: minmax(200px, 250px);
+    gap: 30px;
+}
+.project-card{
+    background-color: #31363F;
+    border-image: fill 0 linear-gradient(
+        transparent,
+        #0e0e0e
+    );
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+    transition: .3s;
+    box-shadow:  8px 8px 16px #aaaaaa,
+             -8px -8px 16px #ffffff;
+}
+.project-card:hover{
+    transform: scale(1.03);
+}
+.project-card > h3,
+.project-card > a{
+    color:#fff;
+    font-family: 'Montserrat', sans-serif;
+}
+.project-card > h3{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.project-card:first-of-type{
+    grid-column: 1/4;
+}
+.project-card:nth-of-type(2){
+    grid-column: 4/6;
+}
+.project-card:nth-of-type(3){
+    grid-column: 1/3;
+}
+.project-card:nth-of-type(4){
+    grid-column: 3/6;
+}
+.project-card:last-of-type{
+    grid-column: 1/6;
+}
+
+
+#footer{
+    background-color: #0e0e0e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#footer h1{
+    font-size: 5rem;
+    line-height: 150px;
+}
+.contacts{
+    display: flex;
+    gap: 30px;
+    padding-bottom: 20px;
+}
+.contacts a{
+    font-size: 25px;
+    color: #aaaaaa;
+}
+.contacts a i{
+    transition: .3s;
+}
+.contacts a:hover i{
+    color: white;
+    transform: scale(1.1);
+    filter: drop-shadow(
+        0 0 15px white
+    );
+}
+
+
+
+#survey-form{
+    background-image: url('https://berndtdenniscanaya.scarlet2.io/Assets/survey.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#tribute-page{
+    background-image: url('https://berndtdenniscanaya.scarlet2.io/Assets/tribute.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#technical-documentation-page{
+    background-image: url('https://berndtdenniscanaya.scarlet2.io/Assets/tdp.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#product-landing-page{
+    background-image: url('https://berndtdenniscanaya.scarlet2.io/Assets/coffeeBro.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#palindrome-checker-page{
+    background-image: url('https://berndtdenniscanaya.scarlet2.io/Assets/palindrome.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#project-card img{
+    object-fit: contain;
+}
+
+
+
+
+footer{
+    width: 100%;
+    height: 300px;
+}
+
+
+@media(max-width:450px){
+    .description-content p{
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:600px){
+    
+    .introduction-content{
+        flex-direction: column;
+    }
+    .introduction-content > div{
+        width: 100%;
+    }
+    #berndt{
+        border-radius: 50px 5px 50px 5px;
+        box-shadow: 20px 20px var(--font-main-color);
+    }
+    .name{
+        font-size: 1.2rem;
+    }
+    #about-description{
+        font-size: 1rem;
+    }
+    .project-tile{
+        margin-top: 30px;
+    }
+  .about-description{
+    padding:0;
+  }
+}
+@media (max-width:950px){
+    .about-content-container{
+        flex-direction: column-reverse;
+    }
+    .description-content h1{
+        font-size: 4rem;
+    }
+
+}
+@media (max-width:1080px) {
+    #project-cards{
+        grid-template-columns: 1fr;
+    }
+    .project-card:first-of-type{
+        grid-column: 1/1;
+    }
+    .project-card:nth-of-type(2){
+        grid-column: 1/1;
+    }
+    .project-card:nth-of-type(3){
+        grid-column: 1/1;
+    }
+    .project-card:nth-of-type(4){
+        grid-column: 1/1;
+    }
+    .project-card:last-of-type{
+        grid-column: 1/1;
+    }
+}
+@media (max-width:1200px){
+    .section{
+        height: fit-content;
+    }
+    .titles{
+        height: 100px;
+    }
+
+    .about-content-secondary-container,
+    .about-description,
+    .about-img{
+        width: 100%;
+    }
+    .name,
+    #about-description,
+    .separator{
+        margin-left: 0;
+        width: 100%;
+    }
+    .sub-section{
+        padding-bottom: 50px;
+    }
+
+    #menu{
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #0e0e0e;
+        top: 70px;
+        left: 100%;
+        flex-direction: column;
+        padding-top: 50px;
+        transition: .3s;
+    }
+    #menu.active{
+        left: 0;
+    }
+    #menu hr{
+        margin: 30px auto;
+        width: 20%;
+    }
+    .nav-contacts,
+    .nav-links{
+        width: 100%;
+        text-align: center;
+    }
+    .nav-links,
+    .nav-contacts i{
+        color: #fff;
+    }
+    .nav-contacts:hover,
+    .nav-links:hover{
+        text-shadow: 
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 30px #fff,
+            0 0 40px #fff,
+            0 0 50px #fff;
+        transform: scale(1.1);
+    }
+    .nav-links:hover::after{
+        width: 0;
+    }
+
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .line:nth-child(1){
+        transform:  rotate(45deg) translateY(11px);
+    }
+    .hamburger.active .line:nth-child(3){
+        transform:  rotate(-45deg) translateY(-11px);
+    }
+    .hamburger.active .line:nth-child(2){
+        opacity: 0;
+    }
+
+}
