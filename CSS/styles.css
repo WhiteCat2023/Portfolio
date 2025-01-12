@@ -94,8 +94,9 @@ nav > ul{
 #menu hr{
     margin: 0 20px;
 }
-
-
+.section{
+    height: 100dvh;
+}
 .hamburger{
     display:none;
     cursor:pointer
