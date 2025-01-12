@@ -1,3 +1,5 @@
+//Three dom just like you said
+
 const hamburger = document.querySelector(".hamburger");
 const menu = document.getElementById("menu");
             
